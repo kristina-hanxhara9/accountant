@@ -21,7 +21,15 @@
       document.documentElement.setAttribute('data-bs-theme', storedTheme);
       })();
     </script>
-    <style>      .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {        color: #ffffff !important;      }    </style>  </head>
+    <style>
+      .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+        color: #ffffff !important;
+      }
+      .btn-outline-primary, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+        color: #ffffff !important;
+      }
+    </style>
+  </head>
   <body>
     
     
@@ -592,17 +600,17 @@
       };
             
       const toggle = document.getElementById('chatbot-toggle');
-      const window = document.getElementById('chatbot-window');
+      const chatWindow = document.getElementById('chatbot-window');
       const close = document.getElementById('chatbot-close');
       const messages = document.getElementById('chatbot-messages');
       const quickQuestions = document.querySelectorAll('.quick-question-btn');
             
       toggle.addEventListener('click', () => {
-        window.style.display = window.style.display === 'none' ? 'flex' : 'none';
+        chatWindow.style.display = chatWindow.style.display === 'none' ? 'flex' : 'none';
       });
             
       close.addEventListener('click', () => {
-        window.style.display = 'none';
+        chatWindow.style.display = 'none';
       });
             
       quickQuestions.forEach(btn => {
@@ -640,6 +648,5 @@
     <script src="assets/vendors/aos/aos.js"></script>
     <script src="assets/vendors/purecounter/purecounter.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/send_email.js"></script>
     </body>
 </html>
